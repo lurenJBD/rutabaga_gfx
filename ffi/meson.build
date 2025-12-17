@@ -8,6 +8,8 @@ librutabaga_gfx_ffi = library(
   link_with: [librutabaga_gfx, libmesa_rust_util],
   rust_abi: 'c',
   install: true,
+  version: meson.project_version(),
+  soversion: '0',
 )
 
 pkg = import('pkgconfig')

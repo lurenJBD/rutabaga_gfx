@@ -1,0 +1,19 @@
+Source: rutabaga-gfx-ffi
+Section: libs
+Priority: optional
+Maintainer: lurenJBD <31967654+lurenJBD@users.noreply.github.com>
+Build-Depends: debhelper (>= 12), meson, ninja-build, bindgen, pkg-config, libclang-dev, clang, libgfxstream-dev
+Standards-Version: 4.5.0
+
+Package: librutabaga-ffi1
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Rutabaga GFX FFI shared library
+ Rust implementation of virtio-gpu (runtime).
+
+Package: librutabaga-ffi-dev
+Architecture: any
+Section: libdevel
+Depends: librutabaga-ffi1 (= ${binary:Version}), ${misc:Depends}
+Description: Rutabaga GFX FFI development files
+ Headers and pkg-config files for Rutabaga GFX.
